@@ -1,7 +1,8 @@
 # https://leetcode.com/problems/permutations/submissions/1416175738
 
-def permute(self, nums: List[int]) -> List[List[int]]:
+def permute(nums):
     permutations = []
+    
     def getPermutations(nums, curr_permut):
         if not nums:
             permutations.append(curr_permut[:])
@@ -12,4 +13,5 @@ def permute(self, nums: List[int]) -> List[List[int]]:
             curr_permut.pop()
         return 
     getPermutations(nums, [])
+    
     return permutations
